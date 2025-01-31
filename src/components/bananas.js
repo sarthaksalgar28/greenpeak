@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 
 const Bananas = () => {
   return (
-    <div className="product-page">
+    <div className="product-page" style={styles.pageContainer}>
       <h1>Fresh Bananas from Greenpeak Farms</h1>
 
       {/* Resized Images */}
-      <div className="product-images">
+      <div className="product-images" style={styles.imageContainer}>
         <img
           src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6SC0bwnf4WUNiVjl38QNv6SBF3vMFmL4jioVYK3gktRmmSRH9jxq1hghpfUYs0DBPKuE-adnK59p_6Mi54OC7UP9wQn232ZRtsR8Dz0i7RrKdiHlqPoQHYm5iRM6xmWUQT_pDZlmBT2TITSC2xJjoYBfmQX-HZXea2duDM2fXV7QR33Oc95nWMfcMajk/s1280/10%20to%2015%20bananas%20fresh%20from%20farm%20background%20should%20be%20bananas%20garden%202%20to%203%20should%20be%20ready%20to%20eat%20in%20image%20there%20should%20be%20trademark%20on%20each%20banans%20with%20_Greenpeak%20Farms_%20no%20logo%20it%20should%20be%20like%20sticker%20(2).jpg"
           alt="Fresh Bananas on Farm"
-          style={{ width: '30%', height: 'auto', marginBottom: '20px' }}
+          style={styles.image}
         />
-        
       </div>
 
       <p>Greenpeak Farms offers premium, farm-fresh bananas that are handpicked and packed to maintain quality and taste. Our bananas are carefully cultivated in the tropical regions of [Your Country], ensuring the highest standards from farm to table.</p>
@@ -42,4 +41,27 @@ const Bananas = () => {
   );
 };
 
+const styles = {
+  pageContainer: {
+    padding: '20px',
+    fontFamily: 'Arial, sans-serif',
+  },
+  imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '20px',
+    flexWrap: 'wrap',
+    gap: '10px',
+  },
+  image: {
+    width: '100%', 
+    maxWidth: '600px', // Adjust the image width to be responsive
+    height: 'auto',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow effect
+    objectFit: 'cover',
+  },
+};
+
+// Make the page responsive
 export default Bananas;

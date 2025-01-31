@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 
 const GreenChilli = () => {
   return (
-    <div className="product-page">
+    <div className="product-page" style={styles.pageContainer}>
       <h1>Fresh Green Chilli from Greenpeak Farms</h1>
 
       {/* Resized Images */}
-      <div className="product-images">
+      <div className="product-images" style={styles.imageContainer}>
         <img
           src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHQJLcnE9WsGzNpASUCuY5MxW9-rELorAJXBvSCj6bIfqMA74TSqLDXqlE2_wiPNvK1UUwxoNZdCmjmqEKyIb3mwhyoSzkF56k6GKmwMyaV3k8Cp4dXCpNnJXNn-yQG0vBt9Z_GlZDsxJfRlJV-SKc05gfFzV4iNvEy6Fdohuhk2vviw_-DBTnJFOG1kg/s1280/create%20images%20of%20long%20Green%20Chilli%20%20with%20Chilli%20Farm%20at%20background%20and%20logo%20of%20_Greenpeak%20Farms_%20like%20sticker%20on%20them.jpg"
           alt="Fresh Green Chilli"
-          style={{ width: '200px', height: '300px', marginLeft: '500px' ,boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}
+          style={styles.image}
         />
-       
       </div>
 
       <p>Greenpeak Farms offers fresh, fiery green chillies that are carefully grown and hand-picked to deliver the perfect spice level for all your culinary needs. Our chillies are packed with flavor and bring a natural heat to any dish.</p>
@@ -43,4 +42,27 @@ const GreenChilli = () => {
   );
 };
 
+const styles = {
+  pageContainer: {
+    padding: '20px',
+    fontFamily: 'Arial, sans-serif',
+  },
+  imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '20px',
+    flexWrap: 'wrap',
+    gap: '10px',
+  },
+  image: {
+    width: '100%',
+    maxWidth: '500px', // Adjust the image width to be responsive
+    height: 'auto',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow effect
+    objectFit: 'cover',
+  },
+};
+
+// Make the page responsive
 export default GreenChilli;
