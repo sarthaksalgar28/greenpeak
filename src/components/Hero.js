@@ -1,48 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled-component for the hero section
-const HeroWrapper = styled.section`
-  height: 100vh;
-  background: url('/assets/hero-image.jpg') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-`;
 
-const HeroContent = styled.div`
-  max-width: 600px;
-`;
 
-const HeroTitle = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 20px;
-`;
-
-const HeroButton = styled.button`
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #28a745;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-`;
-
-// HeroSection Component
-const HeroSection = () => {
-  return (
-    <HeroWrapper>
-      <HeroContent>
-        <HeroTitle>Welcome to Green Peak Farms</HeroTitle>
-        <p>Organic produce delivered fresh from our farm to your table.</p>
-        <HeroButton>Learn More</HeroButton>
-      </HeroContent>
-    </HeroWrapper>
-  );
-};
 
 // Additional Content Section - Fresh Produce
 const ContentWrapper = styled.div`
@@ -96,26 +56,9 @@ const Description = styled.p`
   margin-bottom: 2rem;
 `;
 
-const InputWrapper = styled.div`
-  display: flex;
-  margin-bottom: 2rem;
-`;
 
-const Input = styled.input`
-  padding: 0.75rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 9999px 0 0 9999px;
-  flex: 1;
-`;
 
-const Button = styled.button`
-  background-color: #10b981;
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 0 9999px 9999px 0;
-  font-weight: 600;
-  cursor: pointer;
-`;
+
 
 const Stats = styled.div`
   color: #6b7280;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaSeedling, FaHandsHelping, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
+import {  FaSeedling, FaHandsHelping, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 
 // Styled components for layout
@@ -8,11 +8,7 @@ const Container = styled.div`
   background-color: #f7fafc;
 `;
 
-const Header = styled.header`
-  background-color: #2f8555;
-  color: white;
-  padding: 16px;
-`;
+
 
 const SectionTitle = styled.h2`
   font-size: 2rem;
@@ -33,12 +29,7 @@ const FounderCard = styled(Card)`
   margin: 8px;
 `;
 
-const Footer = styled.footer`
-  background-color: #2f8555;
-  color: white;
-  padding: 16px;
-  text-align: center;
-`;
+
 
 const ValueContainer = styled.div`
   display: flex;
@@ -51,16 +42,6 @@ const ValueCard = styled(Card)`
   width: 23%; /* Each card takes up 23% of the container width */
   text-align: center;
   padding: 20px;
-`;
-
-const ValueItem = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-
-  i {
-    margin-right: 8px;
-  }
 `;
 
 const AboutUs = () => {
