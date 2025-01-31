@@ -46,7 +46,7 @@ const ProductHeading = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 30px;
   font-family: 'Playfair Display', serif;
-  color: white;
+  color: green;
 `;
 
 // Product title

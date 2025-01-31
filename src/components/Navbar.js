@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaBars, FaTimes, FaPhoneAlt, FaChevronDown } from 'react-icons/fa'; // Hamburger and Phone icons
+import { FaBars, FaTimes, FaPhoneAlt, FaChevronDown } from 'react-icons/fa';
 
 // Styled-components for navbar
 const NavbarWrapper = styled.nav`
@@ -20,7 +20,7 @@ const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  margin-right: 12rem; /* Added gap between logo and links */
+  margin-right: 2rem; /* Adjusted gap between logo and links */
 `;
 
 const NavLinks = styled.div`
@@ -60,7 +60,7 @@ const DropdownContent = styled.div`
 `;
 
 const DropdownLink = styled(Link)`
-    padding: 12px 16px;
+  padding: 12px 16px;
   color: #214f32;
   text-decoration: none;
   display: block;
@@ -72,7 +72,7 @@ const DropdownLink = styled(Link)`
 
 const CallNowButton = styled.a`
   display: flex;
-    align-items: center;
+  align-items: center;
   background-color: rgb(218, 227, 218);
   color: #333;
   padding: 0.5rem 1rem;
@@ -108,7 +108,7 @@ const MobileNav = styled.div`
   right: 0;
   height: 100%;
   width: 60%;
-  background-color: #214f32;
+  background-color:rgb(9, 80, 35);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -134,6 +134,23 @@ const CloseIcon = styled.div`
   color: white;
   cursor: pointer;
   align-self: flex-end;
+`;
+
+const MobileDropdown = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+const MobileDropdownLink = styled(Link)`
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 `;
 
 const Navbar = () => {
@@ -190,18 +207,20 @@ const Navbar = () => {
         <MobileNavLink to="/about" onClick={toggleMobileNav}>About</MobileNavLink>
 
         {/* Mobile Products dropdown */}
-        <div>
-          <MobileNavLink to="#" onClick={() => setDropdownOpen(!dropdownOpen)}>Products</MobileNavLink>
-          <div style={{ display: dropdownOpen ? 'block' : 'none' }}>
-            <DropdownLink to="/bananas" onClick={toggleMobileNav}>Bananas</DropdownLink>
-            <DropdownLink to="/pomogranates" onClick={toggleMobileNav}>Pomogranates</DropdownLink>
-            <DropdownLink to="/bananapowder" onClick={toggleMobileNav}>Banana Powder</DropdownLink>
-            <DropdownLink to="/moringapowder" onClick={toggleMobileNav}>Moringa Powder</DropdownLink>
-            <DropdownLink to="/onion" onClick={toggleMobileNav}>Onion</DropdownLink>
-            <DropdownLink to="/tomato" onClick={toggleMobileNav}>Tomato</DropdownLink>
-            <DropdownLink to="/greenchilli" onClick={toggleMobileNav}>Green Chilli</DropdownLink>
-          </div>
-        </div>
+        <MobileDropdown>
+          <MobileNavLink to="#" onClick={() => setDropdownOpen(!dropdownOpen )}>Products</MobileNavLink>
+          {dropdownOpen && (
+            <>
+              <MobileDropdownLink to="/bananas" onClick={toggleMobileNav}>Bananas</MobileDropdownLink>
+              <MobileDropdownLink to="/pomogranates" onClick={toggleMobileNav}>Pomogranates</MobileDropdownLink>
+              <MobileDropdownLink to="/bananapowder" onClick={toggleMobileNav}>Banana Powder</MobileDropdownLink>
+              <MobileDropdownLink to="/moringapowder" onClick={toggleMobileNav}>Moringa Powder</MobileDropdownLink>
+              <MobileDropdownLink to="/onion" onClick={toggleMobileNav}>Onion</MobileDropdownLink>
+              <MobileDropdownLink to="/tomato" onClick={toggleMobileNav}>Tomato</MobileDropdownLink>
+              <MobileDropdownLink to="/greenchilli" onClick={toggleMobileNav}>Green Chilli</MobileDropdownLink>
+            </>
+          )}
+        </MobileDropdown>
 
         <MobileNavLink to="/contact" onClick={toggleMobileNav}>Contact</MobileNavLink>
         <MobileNavLink to="tel:+91 9322021556" onClick={toggleMobileNav}>
