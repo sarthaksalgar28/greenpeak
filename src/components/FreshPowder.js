@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import FreshPowder from './FreshPowder';
-// Additional Content Section - Fresh Produce
+
+// Additional Content Section - Fresh Produce (Powder Products)
 const ContentWrapper = styled.div`
-  max-width: 1200px; // Adjusted for better responsiveness
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem; // Reduced padding for smaller screens
+  padding: 2rem;
 `;
 
 const FlexWrapper = styled.div`
@@ -23,16 +23,16 @@ const LeftColumn = styled.div`
   flex: 1;
   margin-bottom: 2rem;
   text-align: left;
-  padding: 1rem; // Added padding for better spacing
+  padding: 1rem;
 `;
 
 const RightColumn = styled.div`
   flex: 1;
-  margin-left: 0; // Reset margin for smaller screens
-  padding: 1rem; // Added padding for better spacing
+  margin-left: 0;
+  padding: 1rem;
 
   @media (min-width: 768px) {
-    margin-left: 2rem; // Margin for larger screens
+    margin-left: 2rem;
   }
 `;
 
@@ -49,22 +49,22 @@ const GreenTag = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-size: 1.5rem; // Adjusted for smaller screens
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   font-family: 'Playfair Display', serif;
 
   @media (min-width: 768px) {
-    font-size: 2rem; // Larger font size for bigger screens
+    font-size: 2rem;
   }
 `;
 
 const Description = styled.p`
-  font-size: 1rem; // Adjusted for smaller screens
+  font-size: 1rem;
   color: #4b5563;
   margin-bottom: 2rem;
 
   @media (min-width: 768px) {
-    font-size: 1.125rem; // Larger font size for bigger screens
+    font-size: 1.125rem;
   }
 `;
 
@@ -78,7 +78,7 @@ const Grid = styled.div`
   gap: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr; // Two columns for larger screens
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
@@ -108,7 +108,7 @@ const ButtonText = styled.div`
   text-align: center;
   font-size: 0.875rem;
   color: #065f46;
-  
+
   .bold {
     font-weight: bold;
     font-size: 1rem;
@@ -127,13 +127,13 @@ const FreshProduce = () => {
         <LeftColumn>
           <GreenTag>
             <i className="fas fa-award mr-3" />
-            Top Quality Produce
+            Premium Quality Powder Products
           </GreenTag>
-          <Heading>Your Trusted Supplier of Fresh, High-Quality Produce</Heading>
+          <Heading>Your Trusted Supplier of Premium Powders</Heading>
           <Description>
-            At Green Peak Farms, we pride ourselves on exporting premium bananas, nutrient-rich Moringa powder, and fresh vegetables such as onions, green chilies, and tomatoes. Our dedication to excellence ensures that we deliver only the finest produce, sourced directly from our farm to your doorstep.
+            At Green Peak Farms, we offer a variety of nutrient-dense powders including our best-selling Banana Powder and Moringa Powder. These powders are made from the highest-quality produce, sourced directly from our farm to your home. Packed with nutrients and health benefits, our powders are perfect for smoothies, cooking, and more.
           </Description>
-          <Stats>Connected With Over 500+ Farmers</Stats>
+          <Stats>Empowering Health with Nature’s Best Ingredients</Stats>
         </LeftColumn>
 
         <RightColumn>
@@ -141,12 +141,12 @@ const FreshProduce = () => {
             <div>
               <ImageContainer>
                 <Image 
-                  alt="A bunch of ripe bananas on a yellow background, fresh from the farm"
-                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2bK5DVRDp9Ok2FhcR2II7O_k1Ke60ywAuNBNa503VuN1b_BuYp8onv6_sMScQpMdqQHtjDHtTIb3NBdUvrT5D1ObvLyZ_uNobhzF26hD6KcTEG-BtCxE2R66oJds7a90_4OHpmnTeBqeVWp2DVJs6dmuYUVPXiroZKwhsuJqUQDXRl2ImivgDndksn8M/s1280/10%20to%2015%20bananas%20fresh%20from%20farm%20background%20should%20be%20bananas%20garden%202%20to%203%20should%20be%20ready%20to%20eat%20in%20image%20there%20should%20be%20trademark%20on%20each%20banans%20with%20_Greenpeak%20Farms_%20no%20logo%20it%20should%20be%20like%20sticker.jpg" />
+                  alt="Fresh banana powder with bananas in the background"
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLTShqCgJGyXnvXAIDCA16_EkRjV0QSVXblCQ4XFWBMeholiztynQPp3hJGHnFoo7lLqaupjl_7MgEVeJRC4TJcX1OfMjh65HUjIjGtJ6_4AO5EKbljc-Nb5PyeFwiKxJQL6boEgGWHFCTmI6LWxHFWMKRLzr2lYPr_eihn3btFL8bzSp7caI85JL7C-4/s1280/create%20images%20of%20banana%20powder%20with%20bananas%20at%20background%20and%20logo%20of%20_Greenpeak%20Farms_%20like%20sticker%20on%20them%20(1).jpg" />
                 <Badge>
                   <ButtonText>
-                    <div className="bold">100% Pure</div>
-                    <div className="subtext">Quality</div>
+                    <div className="bold">100% Pure Banana Powder</div>
+                    <div className="subtext">For Smoothies & Baking</div>
                   </ButtonText>
                 </Badge>
               </ImageContainer>
@@ -154,11 +154,12 @@ const FreshProduce = () => {
             <div>
               <ImageContainer>
                 <Image 
-                  alt="A pile of fresh pomegranates, carefully harvested"
-                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlsZ0XXeXrKr8EAwewVGCZ6lb8NnkR7YKE8iHjy8AfI7HihZ19hyphenhyphen4Xm_TZvVo6xpfC9D2Gk4oOIWV__W01k3MR-D4i_nNV3ba6hYv-V_hPoB-lm2bb0p3gzunaqbCpfiIoyNvqzrTHzlDRdkJ-rNfMpk3XatxvfnOtONxzoQYRVlmyrfSL43Kljv8efGU/s1280/pomogranates%20fresh%20from%20farm%20background%20should%20be%20pomogranate%20garden%202%20to%203%20should%20be%20cutten%20in%20image%20there%20should%20be%20trademark%20on%20each%20pomogranate%20with%20_Greenpeak%20Farms_%20no%20logo%20it%20should%20be%20like%20sticker%20(1).jpg" />
+                  alt="Fresh Moringa powder with Moringa leaves in the background"
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTAWDJcEQ3s4xFw6cgXqtxpyarx4im8liOqACKZiRaN8XAc0vyTBBVcH51Z53Zsl498siG01pct_QTgL4WXkRW3MQi9XOwpXXvYhh84vdI10EEyfpozg7z-1P2ugRQI7Q8yQKiR4vaOL18FC6lwQMgIIaM6L0vepFnQ54fBDFA8X0sCx8yVUl66rwIo-A/s1280/create%20images%20of%20Moringa%20powder%20with%20Moringa%20oleifera%20%20at%20background%20and%20logo%20of%20_Greenpeak%20Farms_%20like%20sticker%20on%20them.jpg" />
                 <Badge>
                   <ButtonText>
-                    <div className="bold">Quality and Freshness Guaranteed</div>
+                    <div className="bold">Pure Moringa Powder</div>
+                    <div className="subtext">Rich in Nutrients & Antioxidants</div>
                   </ButtonText>
                 </Badge>
               </ImageContainer>
@@ -170,13 +171,10 @@ const FreshProduce = () => {
   );
 };
 
-
-
 // App Component that combines both HeroSection and Fresh Produce section
 const App = () => {
   return (
     <>
-    <FreshPowder/>
       <FreshProduce />
     </>
   );
