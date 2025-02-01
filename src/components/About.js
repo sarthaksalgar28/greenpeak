@@ -1,5 +1,5 @@
 import React from 'react';
-import {  FaSeedling, FaHandsHelping, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaSeedling, FaHandsHelping, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 
 // Styled components for layout
@@ -7,8 +7,6 @@ const Container = styled.div`
   padding: 24px;
   background-color: #f7fafc;
 `;
-
-
 
 const SectionTitle = styled.h2`
   font-size: 2rem;
@@ -29,19 +27,26 @@ const FounderCard = styled(Card)`
   margin: 8px;
 `;
 
-
-
 const ValueContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
   margin-top: 24px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ValueCard = styled(Card)`
   width: 23%; /* Each card takes up 23% of the container width */
   text-align: center;
   padding: 20px;
+  @media (max-width: 768px) {
+    width: 80%; /* Take up more space on smaller screens */
+    margin-bottom: 16px; /* Add space between stacked cards */
+  }
 `;
 
 const AboutUs = () => {
@@ -52,7 +57,7 @@ const AboutUs = () => {
         <section className="bg-white p-6 rounded-lg shadow-lg">
           <SectionTitle>About Us</SectionTitle>
           <p className="mb-4">
-          Greenpeak Farms Producer Company Limited was incorporated on 06-08-2024 in India, with its official registered address located at 340 Kolani Bembale Madha, Solapur, Maharashtra, 413211, India. The company is based in the state of Maharashtra and is classified as a Private Company. Greenpeak Farms is registered under the RoC-Pune jurisdiction and is Active as per the Registrar of Companies (ROC). The company is categorized by the Ministry of Corporate Affairs (MCA) as a Company limited by Shares, which outlines its legal structure and commitment to its shareholders. Currently, there are no directors associated with the company, highlighting its early stages of development and organizational formation.
+            Greenpeak Farms Producer Company Limited was incorporated on 06-08-2024 in India, with its official registered address located at 340 Kolani Bembale Madha, Solapur, Maharashtra, 413211, India. The company is based in the state of Maharashtra and is classified as a Private Company. Greenpeak Farms is registered under the RoC-Pune jurisdiction and is Active as per the Registrar of Companies (ROC). The company is categorized by the Ministry of Corporate Affairs (MCA) as a Company limited by Shares, which outlines its legal structure and commitment to its shareholders. Currently, there are no directors associated with the company, highlighting its early stages of development and organizational formation.
           </p>
         </section>
 
@@ -71,7 +76,6 @@ const AboutUs = () => {
               <p className="text-gray-600">Director</p>
             </FounderCard>
             {/* Founder 3 */}
-           
           </div>
         </section>
 
@@ -115,8 +119,7 @@ const AboutUs = () => {
           </ValueContainer>
         </section>
       </main>
-
-        </Container>
+    </Container>
   );
 };
 
